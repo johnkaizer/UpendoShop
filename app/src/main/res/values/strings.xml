@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Upendo Shop</string>
+    <string name="header">UPENDO SHOP</string>
+    <string name="email">Login</string>
+    <string name="pass">enter your password</string>
+
+    ///Onboard screen headings
+    <string name="heading1">SHOP ONLINE</string>
+    <string name="heading2">MOBILE PAYMENT SOLUTIONS</string>
+    <string name="heading3">SECURE DELIVERY</string>
+
+    //Onboard screen descriptions
+    <string name="desc1">Upendo Shop Offers you the best online shopping experience with competitive prices on products. </string>
+    <string name="desc2">With integrated mobile payment solutions this will be your best shopping experience.</string>
+    <string name="desc3">For those lining around Machakos town will e treated to free delivery. Deliveries to other areas will attract normal charges.</string>
+</resources>
