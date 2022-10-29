@@ -3,14 +3,29 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/UpendoShop/app/src/main/res/drawable/backgr.xml" value="0.126" />
         <entry key="..\:/UpendoShop/app/src/main/res/drawable/background_image.xml" value="0.1375" />
         <entry key="..\:/UpendoShop/app/src/main/res/drawable/background_image1.xml" value="0.1375" />
         <entry key="..\:/UpendoShop/app/src/main/res/drawable/btn_back.xml" value="0.1375" />
-        <entry key="..\:/UpendoShop/app/src/main/res/layout/activity_login.xml" value="0.25" />
+        <entry key="..\:/UpendoShop/app/src/main/res/drawable/btn_background.xml" value="0.126" />
+        <entry key="..\:/UpendoShop/app/src/main/res/drawable/default_backgr.xml" value="0.126" />
+        <entry key="..\:/UpendoShop/app/src/main/res/drawable/searchback.xml" value="0.126" />
+        <entry key="..\:/UpendoShop/app/src/main/res/layout/activity_admin.xml" value="0.25" />
+        <entry key="..\:/UpendoShop/app/src/main/res/layout/activity_cart.xml" value="0.1403985507246377" />
+        <entry key="..\:/UpendoShop/app/src/main/res/layout/activity_dash.xml" value="0.18" />
+        <entry key="..\:/UpendoShop/app/src/main/res/layout/activity_home.xml" value="0.1403985507246377" />
+        <entry key="..\:/UpendoShop/app/src/main/res/layout/activity_login.xml" value="0.1" />
         <entry key="..\:/UpendoShop/app/src/main/res/layout/activity_main.xml" value="0.1671195652173913" />
+        <entry key="..\:/UpendoShop/app/src/main/res/layout/activity_profile.xml" value="0.1403985507246377" />
         <entry key="..\:/UpendoShop/app/src/main/res/layout/activity_register.xml" value="0.1671195652173913" />
+        <entry key="..\:/UpendoShop/app/src/main/res/layout/activity_shop.xml" value="0.1403985507246377" />
         <entry key="..\:/UpendoShop/app/src/main/res/layout/activity_welcome.xml" value="0.1671195652173913" />
+        <entry key="..\:/UpendoShop/app/src/main/res/layout/categories_item.xml" value="0.5" />
+        <entry key="..\:/UpendoShop/app/src/main/res/layout/fragment_home.xml" value="0.1403985507246377" />
+        <entry key="..\:/UpendoShop/app/src/main/res/layout/fragment_orders.xml" value="0.1403985507246377" />
+        <entry key="..\:/UpendoShop/app/src/main/res/layout/fragment_products.xml" value="0.1403985507246377" />
         <entry key="..\:/UpendoShop/app/src/main/res/layout/onboarding_layout.xml" value="0.1671195652173913" />
+        <entry key="..\:/UpendoShop/app/src/main/res/layout/product_items.xml" value="0.21" />
       </map>
     </option>
   </component>

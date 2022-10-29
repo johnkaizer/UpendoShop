@@ -30,11 +30,10 @@ public class WelcomeActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_welcome);
         SharedPreferences preference= getSharedPreferences("PREFERENCE",MODE_PRIVATE);
         String FirstTime= preference.getString("FirstTimeInstall","");
         if (FirstTime.equals("Yes")){
-            Intent intent=new Intent(WelcomeActivity.this,LoginActivity.class);
+            Intent intent=new Intent(   WelcomeActivity.this, LoginActivity.class);
             startActivity(intent);
             finish();
 
@@ -45,7 +44,7 @@ public class WelcomeActivity extends AppCompatActivity {
 
 
         }
-
+        setContentView(R.layout.activity_welcome);
         skipbtn = findViewById(R.id.skip_btn);
         backbtn = findViewById(R.id.back_btn);
         nextbtn = findViewById(R.id.next_btn);
@@ -70,7 +69,7 @@ public class WelcomeActivity extends AppCompatActivity {
         nextbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (getitem(0) < 3)
+                if (getitem(0) < 2)
                     mOnBoardingViewPagerAdapter.setCurrentItem(getitem(1),true);
                 else {
                     Intent i = new Intent(WelcomeActivity.this,LoginActivity.class);
@@ -93,7 +92,7 @@ public class WelcomeActivity extends AppCompatActivity {
     }
     @RequiresApi(api = Build.VERSION_CODES.M)
     public void setUpIndicator(int position){
-        dots = new TextView[4];
+        dots = new TextView[3];
         mShowLayout.removeAllViews();
 
         for (int i = 0; i < dots.length ; i++){
@@ -106,7 +105,7 @@ public class WelcomeActivity extends AppCompatActivity {
 
         }
 
-        dots[position].setTextColor(getResources().getColor(R.color.grey,getApplicationContext().getTheme()));
+        dots[position].setTextColor(getResources().getColor(R.color.yellow,getApplicationContext().getTheme()));
     }
     ViewPager.OnPageChangeListener viewListener = new ViewPager.OnPageChangeListener() {
         @Override

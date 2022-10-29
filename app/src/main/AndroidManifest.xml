@@ -14,15 +14,19 @@
         android:theme="@style/Theme.UpendoShop"
         tools:targetApi="31">
         <activity
-            android:name=".Auth.RegisterActivity"
+            android:name=".Customer.ProfileActivity"
             android:exported="false"
-            android:theme="@style/Theme.UpendoShop.NoActionBar"/>
+            android:theme="@style/Theme.UpendoShop.NoActionBar" />
         <activity
-            android:name=".Auth.LoginActivity"
+            android:name=".Admin.AdminActivity"
             android:exported="false"
-            android:theme="@style/Theme.UpendoShop.NoActionBar"/>
+            android:theme="@style/Theme.UpendoShop.NoActionBar" />
         <activity
-            android:name=".Activities.WelcomeActivity"
+            android:name=".Customer.CartActivity"
+            android:exported="false"
+            android:theme="@style/Theme.UpendoShop.NoActionBar" />
+        <activity
+            android:name=".Activities.DashActivity"
             android:exported="true"
             android:theme="@style/Theme.UpendoShop.NoActionBar">
             <intent-filter>
@@ -30,12 +34,22 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
         <activity
+            android:name=".Auth.RegisterActivity"
+            android:exported="false"
+            android:theme="@style/Theme.UpendoShop.NoActionBar" />
+        <activity
+            android:name=".Auth.LoginActivity"
+            android:exported="false"
+            android:theme="@style/Theme.UpendoShop.NoActionBar" />
+        <activity
+            android:name=".Activities.WelcomeActivity"
+            android:exported="false"
+            android:theme="@style/Theme.UpendoShop.NoActionBar" />
+        <activity
             android:name=".Customer.MainActivity"
-            android:exported="true">
-        </activity>
+            android:exported="true" />
 
         <meta-data
             android:name="preloaded_fonts"

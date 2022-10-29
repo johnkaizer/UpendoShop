@@ -4,7 +4,9 @@
     <color name="yellow">#FF9900</color>
     <color name="light_yellow">#FFCC80</color>
     <color name="light_grey">#AEAEAE</color>
+    <color name="navy_blue">#26495F</color>
     <color name="red">#FF0000</color>
+    <color name="green">#009E60</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
 </resources>
