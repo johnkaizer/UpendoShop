@@ -22,7 +22,7 @@ public class WelcomeActivity extends AppCompatActivity {
 
     ViewPager mOnBoardingViewPagerAdapter;
     LinearLayout mShowLayout;
-    Button skipbtn, backbtn, nextbtn;
+    Button skipbtn;
 
     TextView[] dots;
     OnBoardingViewPagerAdapter onBoardingViewPagerAdapter;
@@ -46,8 +46,6 @@ public class WelcomeActivity extends AppCompatActivity {
         }
         setContentView(R.layout.activity_welcome);
         skipbtn = findViewById(R.id.skip_btn);
-        backbtn = findViewById(R.id.back_btn);
-        nextbtn = findViewById(R.id.next_btn);
 
         skipbtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -55,28 +53,6 @@ public class WelcomeActivity extends AppCompatActivity {
                 Intent i = new Intent(WelcomeActivity.this, LoginActivity.class);
                 startActivity(i);
                 finish();
-
-            }
-        });
-        backbtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                if (getitem(0) > 0)
-                    mOnBoardingViewPagerAdapter.setCurrentItem(getitem(-1),true);
-            }
-        });
-        nextbtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (getitem(0) < 2)
-                    mOnBoardingViewPagerAdapter.setCurrentItem(getitem(1),true);
-                else {
-                    Intent i = new Intent(WelcomeActivity.this,LoginActivity.class);
-                    startActivity(i);
-                    finish();
-                }
-
 
             }
         });
@@ -119,11 +95,6 @@ public class WelcomeActivity extends AppCompatActivity {
 
             setUpIndicator(position);
 
-            if (position > 0){
-                backbtn.setVisibility(View.VISIBLE);
-            }else if (position < 1){
-                backbtn.setVisibility(View.INVISIBLE);
-            }
 
         }
 

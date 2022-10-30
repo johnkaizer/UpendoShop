@@ -27,7 +27,12 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     public void login(View view) {
-        startActivity(new Intent(LoginActivity.this, MainActivity.class));
+        if (admin.isChecked()){
+            startActivity(new Intent(LoginActivity.this, AdminActivity.class));
+            finish();
+
+        }else
+            startActivity(new Intent(LoginActivity.this, MainActivity.class));
         finish();
     }
 

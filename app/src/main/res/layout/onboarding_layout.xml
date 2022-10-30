@@ -12,7 +12,6 @@
         android:layout_width="match_parent"
         android:layout_height="400dp"
         android:layout_marginTop="4dp"
-        android:scaleType="centerCrop"
         android:src="@drawable/image3" />
 
     <TextView

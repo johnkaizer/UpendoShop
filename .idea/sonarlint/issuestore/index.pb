@@ -1,6 +1,4 @@
 
-<
-build.gradle,f\0\f07866736216be0ee2aba49e392191aeae700a35
 :
 
 .gitignore,a\5\a5cc2925ca8258af241be7e5b0381edf30266302
@@ -8,8 +6,6 @@
 settings.gradle,0\5\05efc8b1657769a27696d478ded1e95f38737233
 A
 gradle.properties,2\a\2afbb999f001938c88fa43fc2ef52abf0f8213e4
-@
-app/build.gradle,f\4\f4a01d6a4fcb971362ec00a83903fd3902f52164
 >
 app/.gitignore,5\1\51e1c5d383dfaa35e0e7e5873a0a99355a86880f
 X
@@ -26,3 +22,25 @@ m
 =app/src/test/java/com/project/upendoshop/ExampleUnitTest.java,a\4\a479e8a6023afb14ce8e551c7702304466eff75f
 Å
 Qapp/src/main/java/com/project/upendoshop/Adapters/OnBoardingViewPagerAdapter.java,d\3\d3598128190fa852b352d509549177980696fdb9
+s
+Capp/src/main/java/com/project/upendoshop/Customer/CartActivity.java,e\7\e7550e2ba280f374a1ef9019a7132377fb58c35c
+x
+Happ/src/main/java/com/project/upendoshop/Adapters/CategoriesAdapter.java,f\2\f2a9e96da2bc5d8029cb3552578108871964f44e
+t
+Dapp/src/main/java/com/project/upendoshop/Models/CategoriesModel.java,0\f\0fe3a3c4936a36321cd4e34169fd995c3aefb850
+u
+Eapp/src/main/java/com/project/upendoshop/Activities/DashActivity.java,d\6\d6e476b3815c503b2d226451d846c3da534392d7
+o
+?app/src/main/java/com/project/upendoshop/Models/ItemsModel.java,3\b\3b25926f52e77cbfaa3a0d965562d0b4c7470eae
+r
+Bapp/src/main/java/com/project/upendoshop/Admin/OrdersFragment.java,0\2\02032f2a6b7cee53528741acf322c4d431973b08
+t
+Dapp/src/main/java/com/project/upendoshop/Admin/ProductsFragment.java,0\8\08f48de895d4e2b2774b99b6198315a099a3a4cd
+v
+Fapp/src/main/java/com/project/upendoshop/Customer/ProfileActivity.java,1\c\1c2d113d06f573c2c82be50565c2fe66d3427ae8
+w
+Gapp/src/main/java/com/project/upendoshop/Adapters/ViewPagerAdapter.java,4\7\4767d0a17e34187b262d15e00ff3e5c665d68dc5
+P
+ app/src/main/AndroidManifest.xml,8\c\8c55c3ccc257e5907959013f99656e4c8ec3903e
+s
+Capp/src/main/java/com/project/upendoshop/Customer/MainActivity.java,a\0\a08e3ae46019b5172805c416b406d5f3605bedb5
