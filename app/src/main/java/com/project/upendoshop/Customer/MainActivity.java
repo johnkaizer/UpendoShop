@@ -1,6 +1,8 @@
 package com.project.upendoshop.Customer;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -9,11 +11,18 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 import com.project.upendoshop.Adapters.CategoriesAdapter;
-import com.project.upendoshop.Auth.LoginActivity;
-import com.project.upendoshop.Auth.RegisterActivity;
 import com.project.upendoshop.Models.CategoriesModel;
+import com.project.upendoshop.Models.ProductModel;
+import com.project.upendoshop.Models.User;
+import com.project.upendoshop.ProductAdapter;
 import com.project.upendoshop.R;
+import com.project.upendoshop.UserAdapter;
 
 import java.util.ArrayList;
 
@@ -22,11 +31,44 @@ public class MainActivity extends AppCompatActivity {
     CategoriesAdapter categoriesAdapter;
     ArrayList<CategoriesModel> categoriesModels;
     ImageView cartBtn,shopping;
+
+    ProductAdapter productAdapter;
+    ArrayList<ProductModel>list;
+    RecyclerView prodRec;
+    DatabaseReference databaseReference;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        prodRec=findViewById(R.id.products_recycler);
         shopping=findViewById(R.id.shop);
+
+        databaseReference = FirebaseDatabase.getInstance().getReference().child("ProductDetails");
+        prodRec.setHasFixedSize(true);
+        GridLayoutManager gridLayoutManager =new GridLayoutManager(this, 2,GridLayoutManager.VERTICAL,false);
+        prodRec.setLayoutManager(gridLayoutManager);
+
+        list = new ArrayList<>();
+        productAdapter = new ProductAdapter(this,list);
+        prodRec.setAdapter(productAdapter);
+
+        databaseReference.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                for (DataSnapshot dataSnapshot : snapshot.getChildren()){
+
+                    ProductModel productModel = dataSnapshot.getValue(ProductModel.class);
+                    list.add(productModel);
+                }
+                productAdapter.notifyDataSetChanged();
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
         shopping.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -61,4 +103,5 @@ public class MainActivity extends AppCompatActivity {
         categories.setNestedScrollingEnabled(false);
 
     }
+
 }

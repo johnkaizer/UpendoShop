@@ -1,21 +1,139 @@
 package com.project.upendoshop.Admin;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.ProgressBar;
+import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.OnProgressListener;
+import com.google.firebase.storage.StorageReference;
+import com.google.firebase.storage.UploadTask;
 import com.project.upendoshop.R;
 
 
+import java.util.HashMap;
+
+
 public class ProductsFragment extends Fragment {
+    public static final int REQUEST_CODE_IMAGE=101;
+    ProgressBar progressBar;
+    ImageView image;
+    Button  Addimage, submitbtn;
+    EditText prodname, quantity, amount;
+    Uri imageUri;
+    boolean isImageAdded= false;
+    DatabaseReference dataRef;
+    StorageReference storageRef;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_products, container, false);
+        View view = inflater.inflate(R.layout.fragment_products, container, false);
+        progressBar=view.findViewById(R.id.progressbar1);
+        image =view.findViewById(R.id.prod_image);
+        Addimage=view.findViewById(R.id.appCompatButton2);
+        submitbtn=view.findViewById(R.id.appCompatButton3);
+        prodname=view.findViewById(R.id.prod_name);
+        quantity=view.findViewById(R.id.prod_quantity);
+        amount=view.findViewById(R.id.prod_price);
+
+        progressBar.setVisibility(View.GONE);
+
+
+        dataRef= FirebaseDatabase.getInstance().getReference().child("ProductDetails");
+        storageRef= FirebaseStorage.getInstance().getReference().child("ProductImage");
+
+        Addimage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent= new Intent();
+                intent.setType("image/*");
+                intent.setAction(Intent.ACTION_GET_CONTENT);
+                startActivityForResult(intent,REQUEST_CODE_IMAGE);
+            }
+        });
+        submitbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+             final String prodName= prodname.getText().toString();
+             final String prodQuantity=quantity.getText().toString();
+             final String prodAmount=amount.getText().toString();
+
+             if (isImageAdded!=false && prodAmount!=null && prodName!=null && prodQuantity!=null){
+                 uploadImage(prodAmount,prodQuantity,prodName);
+             }
+
+            }
+        });
+
+        return view;
+
+    }
+    private void uploadImage(String prodAmount, String prodQuantity, String prodName) {
+        progressBar.setVisibility(View.VISIBLE);
+
+       final String key = dataRef.push().getKey();
+        storageRef.child(key +".jpg").putFile(imageUri).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
+            @Override
+            public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
+                storageRef.child(key +".jpg").getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
+                    @Override
+                    public void onSuccess(Uri uri) {
+                        HashMap hashMap=new HashMap();
+                        hashMap.put("ProductName",prodName);
+                        hashMap.put("ProductQuantity",prodQuantity);
+                        hashMap.put("ProductAmount",prodAmount);
+                        hashMap.put("ImageUrl",uri.toString());
+
+                        dataRef.child(key).setValue(hashMap).addOnSuccessListener(new OnSuccessListener<Void>() {
+                            @Override
+                            public void onSuccess(Void unused) {
+                                Toast.makeText(getContext(), "Data was successfully uploaded", Toast.LENGTH_SHORT).show();
+                                quantity.setText("");
+                                prodname.setText("");
+                                amount.setText("");
+
+                            }
+                        });
+                    }
+                });
+
+            }
+        }).addOnProgressListener(new OnProgressListener<UploadTask.TaskSnapshot>() {
+            @Override
+            public void onProgress(@NonNull UploadTask.TaskSnapshot snapshot) {
+                double progress =snapshot.getBytesTransferred()*100/snapshot.getTotalByteCount();
+                progressBar.setProgress((int) progress);
+
+            }
+        });
+
+    }
+
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode==REQUEST_CODE_IMAGE && data!=null){
+            imageUri=data.getData();
+            isImageAdded=true;
+            image.setImageURI(imageUri);
+
+        }
     }
 }

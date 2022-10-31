@@ -2,9 +2,9 @@
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="170dp"
+    android:layout_width="160dp"
     android:layout_height="wrap_content"
-    android:layout_margin="5dp"
+    android:layout_margin="4dp"
     app:cardBackgroundColor="@color/white"
     app:cardCornerRadius="10dp"
     app:cardElevation="12dp"
@@ -36,6 +36,7 @@
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
+
         <TextView
             android:id="@+id/textView15"
             android:layout_width="match_parent"
@@ -51,7 +52,7 @@
             android:id="@+id/textView16"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="3dp"
             android:text="KSH 55"
             android:textColor="@color/grey"
             android:textSize="17sp"
@@ -59,13 +60,26 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView15" />
 
+        <TextView
+            android:id="@+id/quantity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:layout_marginBottom="8dp"
+            android:text="500gm"
+            android:textColor="@color/red"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView16" />
+
         <ImageButton
             android:id="@+id/add_btn"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:background="@color/white"
             android:src="@drawable/dd_cart_24"
-            app:layout_constraintBottom_toBottomOf="@+id/textView16"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="@+id/textView16" />
 
