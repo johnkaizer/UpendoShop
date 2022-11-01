@@ -13,16 +13,18 @@
         <entry key="..\:/UpendoShop/app/src/main/res/layout/activity_admin.xml" value="0.25" />
         <entry key="..\:/UpendoShop/app/src/main/res/layout/activity_cart.xml" value="0.1403985507246377" />
         <entry key="..\:/UpendoShop/app/src/main/res/layout/activity_dash.xml" value="0.25" />
+        <entry key="..\:/UpendoShop/app/src/main/res/layout/activity_details.xml" value="0.18" />
         <entry key="..\:/UpendoShop/app/src/main/res/layout/activity_home.xml" value="0.1403985507246377" />
         <entry key="..\:/UpendoShop/app/src/main/res/layout/activity_login.xml" value="0.1" />
         <entry key="..\:/UpendoShop/app/src/main/res/layout/activity_main.xml" value="0.1671195652173913" />
         <entry key="..\:/UpendoShop/app/src/main/res/layout/activity_password.xml" value="0.2384428223844282" />
-        <entry key="..\:/UpendoShop/app/src/main/res/layout/activity_profile.xml" value="0.1403985507246377" />
+        <entry key="..\:/UpendoShop/app/src/main/res/layout/activity_profile.xml" value="0.18" />
         <entry key="..\:/UpendoShop/app/src/main/res/layout/activity_register.xml" value="0.1671195652173913" />
         <entry key="..\:/UpendoShop/app/src/main/res/layout/activity_shop.xml" value="0.1403985507246377" />
         <entry key="..\:/UpendoShop/app/src/main/res/layout/activity_welcome.xml" value="0.1671195652173913" />
+        <entry key="..\:/UpendoShop/app/src/main/res/layout/cart_items.xml" value="0.41350210970464135" />
         <entry key="..\:/UpendoShop/app/src/main/res/layout/categories_item.xml" value="0.5" />
-        <entry key="..\:/UpendoShop/app/src/main/res/layout/customer_item.xml" value="0.33" />
+        <entry key="..\:/UpendoShop/app/src/main/res/layout/customer_item.xml" value="0.42105263157894735" />
         <entry key="..\:/UpendoShop/app/src/main/res/layout/fragment_home.xml" value="0.25" />
         <entry key="..\:/UpendoShop/app/src/main/res/layout/fragment_orders.xml" value="0.1403985507246377" />
         <entry key="..\:/UpendoShop/app/src/main/res/layout/fragment_products.xml" value="0.22" />

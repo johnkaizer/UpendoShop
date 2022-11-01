@@ -1,4 +1,4 @@
-package com.project.upendoshop;
+package com.project.upendoshop.Adapters;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,6 +11,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.project.upendoshop.Admin.HomeFragment;
 import com.project.upendoshop.Models.User;
+import com.project.upendoshop.R;
 
 import java.util.ArrayList;
 

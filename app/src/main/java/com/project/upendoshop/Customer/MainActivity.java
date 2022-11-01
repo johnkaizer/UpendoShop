@@ -19,10 +19,8 @@ import com.google.firebase.database.ValueEventListener;
 import com.project.upendoshop.Adapters.CategoriesAdapter;
 import com.project.upendoshop.Models.CategoriesModel;
 import com.project.upendoshop.Models.ProductModel;
-import com.project.upendoshop.Models.User;
-import com.project.upendoshop.ProductAdapter;
+import com.project.upendoshop.Adapters.ProductAdapter;
 import com.project.upendoshop.R;
-import com.project.upendoshop.UserAdapter;
 
 import java.util.ArrayList;
 
@@ -72,14 +70,14 @@ public class MainActivity extends AppCompatActivity {
         shopping.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this, ProfileActivity.class));
+                startActivity(new Intent(MainActivity.this, CartActivity.class));
             }
         });
         cartBtn=findViewById(R.id.cart_btn);
         cartBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this, CartActivity.class));
+                startActivity(new Intent(MainActivity.this, ProfileActivity.class));
             }
         });
 

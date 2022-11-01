@@ -5,15 +5,17 @@ public class ProductModel {
     String ProductName;
     String ProductAmount;
     String ProductQuantity;
+    String ProductDescription;
 
     public ProductModel() {
     }
 
-    public ProductModel(String imageUrl, String productName, String productAmount, String productQuantity) {
+    public ProductModel(String imageUrl, String productName, String productAmount, String productQuantity, String productDescription) {
         ImageUrl = imageUrl;
         ProductName = productName;
         ProductAmount = productAmount;
         ProductQuantity = productQuantity;
+        ProductDescription = productDescription;
     }
 
     public String getImageUrl() {
@@ -46,5 +48,13 @@ public class ProductModel {
 
     public void setProductQuantity(String productQuantity) {
         ProductQuantity = productQuantity;
+    }
+
+    public String getProductDescription() {
+        return ProductDescription;
+    }
+
+    public void setProductDescription(String productDescription) {
+        ProductDescription = productDescription;
     }
 }

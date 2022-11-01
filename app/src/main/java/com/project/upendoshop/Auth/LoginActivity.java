@@ -66,12 +66,11 @@ public class LoginActivity extends AppCompatActivity {
             if ("admin@gmail.com".equals(email1) && "abc1234".equals(password1)){
                 startActivity(new Intent(LoginActivity.this, AdminActivity.class));
                 Toast.makeText(LoginActivity.this,"Admin Logged in successfully ",Toast.LENGTH_SHORT).show();
-                progressBar.setVisibility(View.GONE);
-                finish();
+
             }else{
                 Toast.makeText(LoginActivity.this,"Failed to log in check your details ",Toast.LENGTH_SHORT).show();
-                progressBar.setVisibility(View.GONE);
             }
+            progressBar.setVisibility(View.GONE);
         }else
             Login2();
     }
@@ -105,7 +104,6 @@ public class LoginActivity extends AppCompatActivity {
                     startActivity(new Intent(LoginActivity.this, MainActivity.class));
                     Toast.makeText(LoginActivity.this,"Logged in successfully",Toast.LENGTH_SHORT).show();
                     progressBar.setVisibility(View.GONE);
-                    finish();
                 }else{
                     Toast.makeText(LoginActivity.this,"Failed to log in check your credentials and Internet connection",Toast.LENGTH_SHORT).show();
                     progressBar.setVisibility(View.GONE);

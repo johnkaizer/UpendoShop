@@ -35,7 +35,7 @@ public class ProductsFragment extends Fragment {
     ProgressBar progressBar;
     ImageView image;
     Button  Addimage, submitbtn;
-    EditText prodname, quantity, amount;
+    EditText prodname, quantity, amount,description;
     Uri imageUri;
     boolean isImageAdded= false;
     DatabaseReference dataRef;
@@ -52,6 +52,7 @@ public class ProductsFragment extends Fragment {
         prodname=view.findViewById(R.id.prod_name);
         quantity=view.findViewById(R.id.prod_quantity);
         amount=view.findViewById(R.id.prod_price);
+        description= view.findViewById(R.id.prod_desc);
 
         progressBar.setVisibility(View.GONE);
 
@@ -74,9 +75,10 @@ public class ProductsFragment extends Fragment {
              final String prodName= prodname.getText().toString();
              final String prodQuantity=quantity.getText().toString();
              final String prodAmount=amount.getText().toString();
+             final String prodDescription= description.getText().toString();
 
-             if (isImageAdded!=false && prodAmount!=null && prodName!=null && prodQuantity!=null){
-                 uploadImage(prodAmount,prodQuantity,prodName);
+             if (isImageAdded!=false && prodAmount!=null && prodName!=null && prodQuantity!=null && prodDescription!=null){
+                 uploadImage(prodAmount,prodQuantity,prodName,prodDescription);
              }
 
             }
@@ -85,7 +87,7 @@ public class ProductsFragment extends Fragment {
         return view;
 
     }
-    private void uploadImage(String prodAmount, String prodQuantity, String prodName) {
+    private void uploadImage(String prodAmount, String prodQuantity, String prodName, String prodDescription) {
         progressBar.setVisibility(View.VISIBLE);
 
        final String key = dataRef.push().getKey();
@@ -99,6 +101,7 @@ public class ProductsFragment extends Fragment {
                         hashMap.put("ProductName",prodName);
                         hashMap.put("ProductQuantity",prodQuantity);
                         hashMap.put("ProductAmount",prodAmount);
+                        hashMap.put("ProductDescription",prodDescription);
                         hashMap.put("ImageUrl",uri.toString());
 
                         dataRef.child(key).setValue(hashMap).addOnSuccessListener(new OnSuccessListener<Void>() {
@@ -108,6 +111,9 @@ public class ProductsFragment extends Fragment {
                                 quantity.setText("");
                                 prodname.setText("");
                                 amount.setText("");
+                                description.setText("");
+                                image.setImageResource(R.drawable.image_24);
+                                progressBar.setVisibility(View.GONE);
 
                             }
                         });
