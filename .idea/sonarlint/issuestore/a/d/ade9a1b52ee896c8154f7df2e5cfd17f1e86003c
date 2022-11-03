@@ -1,0 +1,7 @@
+
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Å™„´üÿÿÿÿ
+m	java:S116"SRename this field "ImageUrl" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÅèÏ¿ÿÿÿÿÿ
+k	java:S116"VRename this field "ProductName" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¶îÍõ
+m	java:S116"XRename this field "ProductAmount" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÔëÔÈ
+t	java:S116"ZRename this field "ProductQuantity" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÖÄ„âùÿÿÿÿ
+y	java:S116"]Rename this field "ProductDescription" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(È”Á¸8€©ñÃ0

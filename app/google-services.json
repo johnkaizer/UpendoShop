@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "42880924223",
+    "project_id": "upendo-shop",
+    "storage_bucket": "upendo-shop.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:42880924223:android:435d57b026127bd562d68a",
+        "android_client_info": {
+          "package_name": "com.project.upendoshop"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "42880924223-ftosknrq20gc3qukunjjp7s2o8kqp51l.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAPVM9s1oi-g95SE3lFVBT9FHUHFVY3SWc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "42880924223-ftosknrq20gc3qukunjjp7s2o8kqp51l.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
