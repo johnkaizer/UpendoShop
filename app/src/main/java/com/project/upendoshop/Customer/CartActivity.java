@@ -11,8 +11,8 @@ import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 
 import com.project.upendoshop.Adapters.DBmain;
-import com.project.upendoshop.CartAdapter;
-import com.project.upendoshop.CartModels;
+import com.project.upendoshop.Adapters.CartAdapter;
+import com.project.upendoshop.Models.CartModels;
 import com.project.upendoshop.R;
 
 import java.util.ArrayList;

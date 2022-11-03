@@ -1,4 +1,4 @@
-package com.project.upendoshop;
+package com.project.upendoshop.Models;
 
 public class CartModels {
     private int id;
