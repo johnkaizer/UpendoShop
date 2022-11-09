@@ -16,9 +16,33 @@
         android:theme="@style/Theme.UpendoShop"
         tools:targetApi="31">
         <activity
+            android:name=".Categories.ShoesActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Categories.GroceriesActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Categories.ClothesActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Categories.ToysActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Categories.StationaryActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Categories.ElectronicActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Categories.FoodActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Categories.FruitsActivity"
+            android:exported="false" />
+        <activity
             android:name=".Activities.DetailsActivity"
             android:exported="false"
-            android:theme="@style/Theme.UpendoShop.NoActionBar"/>
+            android:theme="@style/Theme.UpendoShop.NoActionBar" />
         <activity
             android:name=".Auth.PasswordActivity"
             android:exported="false"

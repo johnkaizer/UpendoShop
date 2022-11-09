@@ -11,10 +11,12 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
+import android.widget.Spinner;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -40,11 +42,17 @@ public class ProductsFragment extends Fragment {
     boolean isImageAdded= false;
     DatabaseReference dataRef;
     StorageReference storageRef;
+    private Spinner spinner1;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_products, container, false);
+        //Spinners
+        spinner1 = view.findViewById(R.id.donation_category_spinner);
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(getActivity() ,R.array.Categories, android.R.layout.simple_spinner_item);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinner1.setAdapter(adapter);
         progressBar=view.findViewById(R.id.progressbar1);
         image =view.findViewById(R.id.prod_image);
         Addimage=view.findViewById(R.id.appCompatButton2);
@@ -76,9 +84,10 @@ public class ProductsFragment extends Fragment {
              final String prodQuantity=quantity.getText().toString();
              final String prodAmount=amount.getText().toString();
              final String prodDescription= description.getText().toString();
+             final String prodCategory= spinner1.getSelectedItem().toString();
 
-             if (isImageAdded!=false && prodAmount!=null && prodName!=null && prodQuantity!=null && prodDescription!=null){
-                 uploadImage(prodAmount,prodQuantity,prodName,prodDescription);
+             if (isImageAdded!=false && prodAmount!=null && prodName!=null && prodQuantity!=null && prodDescription!=null && prodCategory!=null){
+                 uploadImage(prodAmount,prodQuantity,prodName,prodDescription,prodCategory);
              }
 
             }
@@ -87,7 +96,7 @@ public class ProductsFragment extends Fragment {
         return view;
 
     }
-    private void uploadImage(String prodAmount, String prodQuantity, String prodName, String prodDescription) {
+    private void uploadImage(String prodAmount, String prodQuantity, String prodName, String prodDescription,String prodCategory) {
         progressBar.setVisibility(View.VISIBLE);
 
        final String key = dataRef.push().getKey();
@@ -102,6 +111,7 @@ public class ProductsFragment extends Fragment {
                         hashMap.put("ProductQuantity",prodQuantity);
                         hashMap.put("ProductAmount",prodAmount);
                         hashMap.put("ProductDescription",prodDescription);
+                        hashMap.put("ProductCategory",prodCategory);
                         hashMap.put("ImageUrl",uri.toString());
 
                         dataRef.child(key).setValue(hashMap).addOnSuccessListener(new OnSuccessListener<Void>() {

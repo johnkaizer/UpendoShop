@@ -36,8 +36,6 @@ s
 Capp/src/main/java/com/project/upendoshop/Auth/PasswordActivity.java,d\8\d81679a753d1c003f4a241a0a34441b05f4c6025
 i
 9app/src/main/java/com/project/upendoshop/Models/User.java,8\4\84df494a2306e418366c5762de4053e5ac3d9a32
-P
- app/src/main/AndroidManifest.xml,8\c\8c55c3ccc257e5907959013f99656e4c8ec3903e
 x
 Happ/src/main/java/com/project/upendoshop/Activities/DetailsActivity.java,f\7\f7ab8536d2e68fa854344d7ca26eb9150f5cb06c
 p
@@ -52,9 +50,11 @@ r
 Bapp/src/main/java/com/project/upendoshop/Admin/OrdersFragment.java,0\2\02032f2a6b7cee53528741acf322c4d431973b08
 r
 Bapp/src/main/java/com/project/upendoshop/Adapters/CartAdapter.java,7\8\78e697074353d31dd41cd1bf43b416f473b2169b
-p
-@app/src/main/java/com/project/upendoshop/Admin/HomeFragment.java,7\8\786ea2aafe58d662aeb939607ae937f31ba43bf5
 @
 app/build.gradle,f\4\f4a01d6a4fcb971362ec00a83903fd3902f52164
 A
 gradle.properties,2\a\2afbb999f001938c88fa43fc2ef52abf0f8213e4
+q
+Aapp/src/main/java/com/project/upendoshop/Models/ProductModel.java,a\d\ade9a1b52ee896c8154f7df2e5cfd17f1e86003c
+u
+Eapp/src/main/java/com/project/upendoshop/Adapters/ProductAdapter.java,8\2\82e3e6ada15c7f69c0bd1308d828f49d9d6af9e2
