@@ -1,6 +1,6 @@
 # UpendoShop
 # Status :white_check_mark:  DONE :white_check_mark:.
-### Changisha App is an android application that will enable users create donation request and post them to activate crowd funding from willing contributors, the application uses firebase authentication and storage and it uses the Safaricom Daraja Api for Online payments.
+UpendShop App is an android application that will enable an admin manage products, users and orders as well as allow customers view products and make order  then pay using mpesa using the Safaricom Daraja Api for Online payments. Authentication and Storage is done using Firebase data persistence is implemented using sqlite.
 ## TechStack
 * Java- `Backend.`
 * XMLs- `Frontend.`
@@ -12,15 +12,15 @@
 * Daraja Api- `For Lipa na Mpesa Online`
 
 ## SCREENSHOTS
-<img src="images/splash.png" width="200" > <img src="images/home.png" width="200" >
-<img src="images/donationitem.png" width="200" ><img src="mpesa.jpeg" width="180" >
+<img src="Images/welcome.png" width="200" > <img src="Images/home.png" width="200" >
+<img src="Images/order.png" width="200" ><img src="Images/more.png" width="200" >
 
 ## Setup & Installation
 * Clone the project into your machine from `https://github.com/johnkaizer/Changisha-App.git`
 * Run the project in the forked root folder- gradle run.
 
-# Changisha Android App
-This app demonstrates how to impeliment Lipa Na MPESA Online.
+# Upendo Android App (Lipa naMpesa Online)
+This section talks of how to impeliment Lipa Na MPESA Online.
 Documentation on the API can be found on [Safaricom Developer Portal] (https://developer.safaricom.co.ke/docs)
 
 ### Requirements
@@ -31,6 +31,7 @@ Documentation on the API can be found on [Safaricom Developer Portal] (https://d
 ### Getting Safaricom Credentials
 1. Create an account on the [Safaricom Developer Portal] (https://developer.safaricom.co.ke/)
 2. Create a Lipa na MPESA Online App
+Import the libraries below
 ### Libraries Used
 1. [Sweet alerts] (https://github.com/pedant/sweet-alert-dialog)
 2. [Butterknife] (https://github.com/JakeWharton/butterknife)
