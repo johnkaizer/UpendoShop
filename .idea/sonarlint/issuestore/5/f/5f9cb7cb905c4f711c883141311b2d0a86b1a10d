@@ -1,0 +1,6 @@
+
+v	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(æÎÎ›8·¹µëÅ0
+{
+java:S3252#"YUse static access with "androidx.recyclerview.widget.LinearLayoutManager" for "VERTICAL".(˜Íñèüÿÿÿÿ8‰¡ýêÅ0
+ž
+java:S11865"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(Ô°¤¦8‹¡ýêÅ0
