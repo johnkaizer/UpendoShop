@@ -1,6 +1,7 @@
 package com.project.upendoshop.Adapters;
 
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
@@ -16,7 +17,7 @@ public class DBmain extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        String query = "create table "+TABLENAME+" (id integer primary key, title text,quantity text, pcs text,amount text)";
+        String query = "create table "+TABLENAME+" (id integer primary key, title text,quantity text, pcs int,amount int)";
         db.execSQL(query);
     }
 
@@ -25,5 +26,24 @@ public class DBmain extends SQLiteOpenHelper {
         String query ="drop table if exists "+TABLENAME+" ";
         db.execSQL(query);
 
+    }
+
+    public int sumPriceCartItems() {
+        int result = 0;
+        SQLiteDatabase db = this.getWritableDatabase();
+        Cursor cursor = db.rawQuery("select sum(amount) from " + TABLENAME, null);
+        if (cursor.moveToFirst()) result = cursor.getInt(0);
+        cursor.close();
+        db.close();
+        return result;
+    }
+    public String CartItems() {
+        String result = null;
+        SQLiteDatabase db = this.getWritableDatabase();
+        Cursor cursor = db.rawQuery("select title from " + TABLENAME, null);
+        if (cursor.moveToFirst()) result = cursor.getString(0);
+        cursor.close();
+        db.close();
+        return result;
     }
 }
