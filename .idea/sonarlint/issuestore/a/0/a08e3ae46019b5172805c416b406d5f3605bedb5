@@ -1,0 +1,49 @@
+
+>
+java:S1604;"(Make this anonymous inner class a lambda(Å —
+C
+java:S1604A"(Make this anonymous inner class a lambda(ê­êâþÿÿÿÿ
+>
+java:S1604G"(Make this anonymous inner class a lambda(ð—–ƒ
+C
+java:S1604M"(Make this anonymous inner class a lambda(÷’þúÿÿÿÿ
+C
+java:S1604S"(Make this anonymous inner class a lambda(„•Ô üÿÿÿÿ
+>
+java:S1604Y"(Make this anonymous inner class a lambda(ÚƒÿË
+>
+java:S1604_"(Make this anonymous inner class a lambda(Æ˜Ñ›
+C
+java:S1604e"(Make this anonymous inner class a lambda(Æßòúúÿÿÿÿ
+?
+java:S1604„"(Make this anonymous inner class a lambda(¸Ö¸¦
+D
+java:S1604‹"(Make this anonymous inner class a lambda(òŠÛ£úÿÿÿÿ
+o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Ç·€­
+W
+java:S1659%"BDeclare "card2" and all following declarations on a separate line.(ñ„¨
+A
+java:S1659&"&Declare "shopping" on a separate line.(üÃØõÿÿÿÿÿ
+i
+java:S1450%"TRemove the "card1" field and declare it as a local variable in the relevant methods.(ñ„¨
+i
+java:S1450%"TRemove the "card2" field and declare it as a local variable in the relevant methods.(ñ„¨
+i
+java:S1450%"TRemove the "card3" field and declare it as a local variable in the relevant methods.(ñ„¨
+i
+java:S1450%"TRemove the "card4" field and declare it as a local variable in the relevant methods.(ñ„¨
+i
+java:S1450%"TRemove the "card5" field and declare it as a local variable in the relevant methods.(ñ„¨
+i
+java:S1450%"TRemove the "card6" field and declare it as a local variable in the relevant methods.(ñ„¨
+i
+java:S1450%"TRemove the "card7" field and declare it as a local variable in the relevant methods.(ñ„¨
+i
+java:S1450%"TRemove the "card8" field and declare it as a local variable in the relevant methods.(ñ„¨
+Q	java:S125n"<This block of commented-out lines of code should be removed.(µø¢
+˜
+java:S1186€"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(Ô°¤¦
+~
+java:S4144¡"bUpdate this method so that its implementation is not identical to "onQueryTextSubmit" on line 156.(Ðïû«ûÿÿÿÿ
+˜
+java:S1186¾"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(Ô°¤¦

@@ -1,0 +1,19 @@
+
+k	java:S1177"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ËÍë€øÿÿÿÿ
+k	java:S117O"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‡—¬¼ûÿÿÿÿ
+=
+java:S16044"(Make this anonymous inner class a lambda(œŸ´
+˜
+java:S1186‚"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¨‰ïÃ
+Q
+java:S1874"6Remove this use of "ProgressDialog"; it is deprecated.(¹£½­úÿÿÿÿ
+L
+java:S18740"6Remove this use of "ProgressDialog"; it is deprecated.(‘õ—™
+P
+java:S11178":Rename "amount" which hides the field declared at line 39.(¶×Ëð
+—
+java:S1186J"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(Äà‡†
+M
+java:S1874P"2Remove this use of "setMessage"; it is deprecated.(çöíÖþÿÿÿÿ
+N
+java:S1874R"8Remove this use of "setIndeterminate"; it is deprecated.(ŸƒÄÔ
