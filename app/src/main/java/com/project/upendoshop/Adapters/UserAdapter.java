@@ -1,8 +1,10 @@
 package com.project.upendoshop.Adapters;
 
+import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -20,6 +22,15 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.ViewHolder> {
 
     HomeFragment context;
     ArrayList<User>list;
+    private OnItemClickListener listener;
+
+    public interface OnItemClickListener{
+        void onItemClick(int position);
+
+    }
+    public void setOnItemClickListener(OnItemClickListener clickListener){
+        listener =clickListener;
+    }
 
     public UserAdapter(HomeFragment context, ArrayList<User> list) {
         this.context = context;
@@ -29,7 +40,10 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.ViewHolder> {
     @NonNull
     @Override
     public UserAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        return new ViewHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.customer_item,parent,false));
+        Context context = parent.getContext();
+        LayoutInflater layoutInflater = LayoutInflater.from(context);
+        View v = layoutInflater.inflate(R.layout.customer_item, parent, false);
+        return new ViewHolder(v,listener);
 
     }
 
@@ -39,6 +53,13 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.ViewHolder> {
         holder.name.setText(user.getFullName());
         holder.email.setText(user.getEmail());
         holder.password.setText(user.getPassword());
+        holder.delete.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                listener.onItemClick(holder.getAdapterPosition());
+
+            }
+        });
 
     }
 
@@ -50,11 +71,13 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.ViewHolder> {
     public class ViewHolder extends RecyclerView.ViewHolder {
 
         TextView name, email, password;
-        public ViewHolder(@NonNull View itemView) {
+        ImageButton delete;
+        public ViewHolder(@NonNull View itemView,OnItemClickListener listener) {
             super(itemView);
             name= itemView.findViewById(R.id.cust_name);
             email = itemView.findViewById(R.id.cust_email);
             password = itemView.findViewById(R.id.cust_pass);
+            delete = itemView.findViewById(R.id.delete_btn);
         }
     }
 }

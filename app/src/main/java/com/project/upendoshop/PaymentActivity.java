@@ -81,9 +81,6 @@ public class PaymentActivity extends AppCompatActivity {
         mProgressDialog.setTitle("Please Wait...");
         mProgressDialog.setIndeterminate(true);
         mProgressDialog.show();
-        mPhone.setText("");
-        mAmount.setText("");
-        finish();
         String timestamp = Utils.getTimestamp();
         STKPush stkPush = new STKPush(
                 BUSINESS_SHORT_CODE,
@@ -125,9 +122,15 @@ public class PaymentActivity extends AppCompatActivity {
             }
         });
     }
-
     @Override
     public void onPointerCaptureChanged(boolean hasCapture) {
 
+    }
+    @Override
+    public void onDestroy(){
+        super.onDestroy();
+        if ( mProgressDialog!=null && mProgressDialog.isShowing() ){
+            mProgressDialog.cancel();
+        }
     }
 }

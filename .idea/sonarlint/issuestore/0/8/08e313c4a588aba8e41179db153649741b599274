@@ -1,0 +1,9 @@
+
+C
+java:S16046"(Make this anonymous inner class a lambda(èë¦Œþÿÿÿÿ
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(··ËÑùÿÿÿÿ
+\
+java:S1659"ADeclare "date" and all following declarations on a separate line.(‡§Ê©úÿÿÿÿ
+\
+java:S1659"ADeclare "name" and all following declarations on a separate line.(‹©Í§úÿÿÿÿ
+c	java:S100>"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.( Ð¢Š

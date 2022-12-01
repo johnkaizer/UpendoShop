@@ -44,6 +44,13 @@ public class HomeFragment extends Fragment {
         list = new ArrayList<>();
         userAdapter = new UserAdapter(this,list);
         recyclerView.setAdapter(userAdapter);
+        userAdapter.setOnItemClickListener(new UserAdapter.OnItemClickListener() {
+            @Override
+            public void onItemClick(int position) {
+                list.remove(position);
+                userAdapter.notifyItemRemoved(position);
+            }
+        });
 
         databaseReference.addValueEventListener(new ValueEventListener() {
             @Override

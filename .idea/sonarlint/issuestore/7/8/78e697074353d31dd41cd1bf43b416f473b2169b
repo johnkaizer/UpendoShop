@@ -1,0 +1,10 @@
+
+z
+java:S1319"dThe type of "list" should be an interface such as "List" rather than the implementation "ArrayList".(ÈŸĞŠ
+f	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÈŸĞŠ
+>
+java:S16041"(Make this anonymous inner class a lambda(’“¡Î
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(æõ€ÿÿÿÿÿ
+j	java:S116"URename this field "cart_items" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¥¤ÅŞ
+^
+java:S1659G"CDeclare "amount" and all following declarations on a separate line.(Ô¾”Œúÿÿÿÿ
