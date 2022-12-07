@@ -1,0 +1,14 @@
+
+z
+java:S1319#"dThe type of "list" should be an interface such as "List" rather than the implementation "ArrayList".(ºıÜ¡
+>
+java:S16048"(Make this anonymous inner class a lambda(š¾…
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(æõ€ÿÿÿÿÿ
+V
+java:S1117+";Rename "context" which hides the field declared at line 23.(…Ö›àÿÿÿÿÿ
+P
+java:S1874;":Remove this use of "getAdapterPosition"; it is deprecated.(Ùˆå‹
+X
+java:S1659I"BDeclare "email" and all following declarations on a separate line.(‡šÛ°
+J
+java:S1172K"/Remove this unused method parameter "listener".(ĞáÌ”úÿÿÿÿ
