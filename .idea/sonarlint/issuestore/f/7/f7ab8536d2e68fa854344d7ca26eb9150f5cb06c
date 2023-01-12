@@ -3,8 +3,8 @@ C
 java:S1604/"(Make this anonymous inner class a lambda(µ¯ãùÿÿÿÿ
 C
 java:S16046"(Make this anonymous inner class a lambda(†âİ¸úÿÿÿÿ
-J
-java:S1604="(Make this anonymous inner class a lambda(“¶¸¬ùÿÿÿÿ8‹¢û¢Ã0
+C
+java:S1604="(Make this anonymous inner class a lambda(“¶¸¬ùÿÿÿÿ
 t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(··ËÑùÿÿÿÿ
 h	java:S116"SRename this field "AddItems" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(“—ß·
 ^
