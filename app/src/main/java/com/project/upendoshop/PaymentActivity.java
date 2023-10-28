@@ -20,8 +20,6 @@ import android.widget.TextView;
 import com.project.upendoshop.Models.AccessToken;
 import com.project.upendoshop.Models.STKPush;
 
-import butterknife.BindView;
-import butterknife.ButterKnife;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -31,11 +29,8 @@ public class PaymentActivity extends AppCompatActivity {
     private DarajaApiClient mApiClient;
     private ProgressDialog mProgressDialog;
 
-    @BindView(R.id.Amount_txt)
     EditText mAmount;
-    @BindView(R.id.donation_number)
     EditText mPhone;
-    @BindView(R.id.button3)
     Button mPay;
     TextView amount;
 
@@ -44,8 +39,10 @@ public class PaymentActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_payment);
         amount= findViewById(R.id.text_amount);
+        mAmount = findViewById(R.id.Amount_txt);
+        mPhone = findViewById(R.id.donation_number);
+        mPay =findViewById(R.id.button3);
         amount.setText(getIntent().getExtras().getString("amount"));
-        ButterKnife.bind(this);
         mProgressDialog = new ProgressDialog(this);
         mApiClient = new DarajaApiClient();
         mApiClient.setIsDebug(true); //Set True to enable logging, false to disable.

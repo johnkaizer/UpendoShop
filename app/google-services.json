@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "77906112921",
+    "firebase_url": "https://upendoshop-a828c-default-rtdb.firebaseio.com",
+    "project_id": "upendoshop-a828c",
+    "storage_bucket": "upendoshop-a828c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:77906112921:android:7f1bc6a09238ffff03a308",
+        "android_client_info": {
+          "package_name": "com.project.upendoshop"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCgZDphu-8Jp6Jc5InHnGfeBckgoha7E0o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

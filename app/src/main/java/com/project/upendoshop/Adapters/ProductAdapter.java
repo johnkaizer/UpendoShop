@@ -13,6 +13,8 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.project.upendoshop.Activities.DetailsActivity;
+import com.project.upendoshop.Categories.ClothesActivity;
+import com.project.upendoshop.Customer.MainActivity;
 import com.project.upendoshop.Models.ProductModel;
 import com.project.upendoshop.R;
 import com.squareup.picasso.Picasso;
@@ -58,8 +60,6 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ViewHold
 
             }
         });
-
-
     }
 
     @Override

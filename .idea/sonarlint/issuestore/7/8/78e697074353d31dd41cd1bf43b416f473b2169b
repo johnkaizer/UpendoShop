@@ -5,6 +5,8 @@ f	java:S117"QRename this local variable to match the regular expression '^[a-
 >
 java:S16041"(Make this anonymous inner class a lambda(’“¡Î
 t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(æõ€ÿÿÿÿÿ
+f
+java:S20954"DUse try-with-resources or close this "DBmain" in a "finally" clause.(¤Ñı«şÿÿÿÿ8úÆúã0
 j	java:S116"URename this field "cart_items" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¥¤ÅŞ
 ^
 java:S1659G"CDeclare "amount" and all following declarations on a separate line.(Ô¾”Œúÿÿÿÿ

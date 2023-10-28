@@ -2,5 +2,5 @@
 z
 java:S1319"dThe type of "list" should be an interface such as "List" rather than the implementation "ArrayList".(¼™Û–
 t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(æõ€ÿÿÿÿÿ
-P
-java:S1172"3Remove this unused method parameter "mainActivity".(¼™Û–8¬º—«Â0
+I
+java:S1172"3Remove this unused method parameter "mainActivity".(¼™Û–
